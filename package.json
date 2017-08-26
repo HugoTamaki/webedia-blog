@@ -1,5 +1,12 @@
 {
   "name": "webedia-blog",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "version": "1.0.0",
+  "description": "Webedia blog",
+  "main": "index.js",
+  "author": "Hugo Tamaki <hugokt2005@yahoo.com.br>",
+  "license": "MIT"
 }
