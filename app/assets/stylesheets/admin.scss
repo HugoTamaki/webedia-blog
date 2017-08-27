@@ -1,0 +1,21 @@
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  text-align: left;
+  margin-right: -4px;
+}
+
+.admin-menu {
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      display: inline;
+      margin: 0 10px;
+    }
+  }
+}
