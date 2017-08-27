@@ -1,0 +1,29 @@
+pt-BR:
+  activerecord:
+    errors:
+      template:
+        body: "Ocorreram problemas com os seguintes campos:"
+        header:
+          one: "1 erro proibiu este %{model} de ser salvo"
+          other: "%{count} erros proibiram este {model}% de ser salvo"
+      messages:
+        record_invalid: "Validação falhou:  %{errors}"
+        inclusion: "não está incluido na lista"
+        exclusion: "está reservado"
+        invalid: "é inválido"
+        confirmation: "confirmação inválida"
+        accepted: "deve ser aceito"
+        empty: "não deve estar vazio"
+        blank: "não deve estar em branco"
+        too_long: "é muito longo (máximo de {{count}} caracteres)"
+        too_short: "é muito curto (minimum is {{count}} caracteres)"
+        wrong_length: "comprimento errado (deve ter {{count}} caracteres)"
+        taken: "já foi escolhido"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
