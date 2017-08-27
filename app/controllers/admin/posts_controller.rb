@@ -16,7 +16,7 @@ module Admin
       if @post.save
         redirect_to admin_posts_path, notice: "Post criado com sucesso!"
       else
-        render :new, alert: "Verifique os campos e tente novamente."
+        render :new, alert: "Verifique os campos e tente novamente.", status: :bad_request
       end
     end
 
