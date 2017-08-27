@@ -1,0 +1,17 @@
+<% @posts.each do |post| %>
+  <div class="post <%= post == @posts.first ? "col-sm-12" : "col-sm-6" %>">
+    <h1><%= post.title %></h1>
+
+    <p class="subtitle"><%= post.subtitle %></p>
+
+    <div class="image">
+      <img src="http://via.placeholder.com/500x200" alt="" style="width: 100%;">
+    </div>
+
+    <div class="content <%= post == @posts.first ? "first" : "others" %>">
+      <p>
+        <%= post.content %>
+      </p>
+    </div>
+  </div>
+<% end %>
