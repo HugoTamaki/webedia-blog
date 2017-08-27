@@ -1,0 +1,18 @@
+<h1>Meus posts</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>subtitulo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.subtitle %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

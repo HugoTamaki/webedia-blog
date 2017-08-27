@@ -1,0 +1,21 @@
+<h1>Novo Post</h1>
+
+<%= simple_form_for @post, url: admin_posts_path do |f| %>
+  <div class="form-inputs">
+    <div class="form-group">
+      <%= f.input :title, autofocus: true, input_html: {class: 'form-control'} %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :subtitle, input_html: {class: 'form-control'} %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :content, input_html: {class: 'form-control'} %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Criar post", class: 'btn btn-lg btn-block btn-primary' %>
+  </div>
+<% end %>
