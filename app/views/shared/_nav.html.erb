@@ -1,0 +1,38 @@
+<div class="container">
+  <nav class="admin-menu">
+    <% if not current_user.blank? %>
+      <ul>
+        <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'Novo Post', new_admin_post_path %></li>
+      </ul>
+    <% end %>
+  </nav>
+</div>
+
+<% if current_user.blank? && controller_path != 'devise/sessions' && action_name != 'new'  %>
+  <nav class="navbar menu">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-menu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="collapsable-menu">
+        <ul class="nav navbar-nav">
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<% end %>
