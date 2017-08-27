@@ -20,10 +20,34 @@ module Admin
       end
     end
 
+    def edit
+      @post = Post.find(params[:id])
+    end
+
+    def update
+      @post = Post.find(params[:id])
+
+      if @post.update(post_params)
+        redirect_to admin_posts_path, notice: "Post editado com sucesso!"
+      else
+        render :edit, alert: "Verifique os campos e edite novamente."
+      end
+    end
+
+    def destroy
+      @post = Post.find(params[:id])
+
+      if @post.destroy
+        redirect_to admin_posts_path, notice: "Post apagado com sucesso."
+      else
+        redirect_to admin_posts_path, alert: "Não foi possível apagar o post."
+      end
+    end
+
     private
 
     def post_params
-      params.require(:post).permit(:title, :subtitle, :content)
+      params.require(:post).permit(:title, :subtitle, :image, :content)
     end
   end
 end

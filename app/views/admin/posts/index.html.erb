@@ -5,6 +5,10 @@
     <tr>
       <th>Titulo</th>
       <th>subtitulo</th>
+      <th>Imagem</th>
+      <th>Conteúdo</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +16,14 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.subtitle %></td>
+        <td><%= image_tag post.image.url(:thumb) %></td>
+        <td>
+          <div class="truncate">
+            <%= post.content %></td>
+          </div>
+        </td>
+        <td><%= link_to "Editar", edit_admin_post_path(post) %></td>
+        <td><%= link_to "Apagar", admin_post_path(post), data: {:confirm => 'Tem certeza?'}, :method => :delete %></td>
       </tr>
     <% end %>
   </tbody>

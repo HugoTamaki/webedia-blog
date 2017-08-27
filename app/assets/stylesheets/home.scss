@@ -28,7 +28,7 @@ body {
   }
 }
 
-.post {
+.post-content {
   h1 {
     margin-top: 10px;
     color: #F64F18;
@@ -39,10 +39,20 @@ body {
     font-weight: bolder;
   }
 
+  .image {
+    .post-image {
+      width: 100%;
+    }
+  }
+
   margin: 20px 0;
   background-color: #fff;
   border-radius: 5px;
   padding: 13px;
+
+  &.others {
+    min-height: 396px;
+  }
 
   .content {
     margin: 15px 0;

@@ -1,6 +1,6 @@
-<h1>Novo Post</h1>
+<h1>Editar Post</h1>
 
-<%= simple_form_for @post, url: admin_posts_path do |f| %>
+<%= simple_form_for @post, url: admin_post_path(@post), method: :put do |f| %>
   <div class="form-inputs">
     <div class="form-group">
       <%= f.input :title, autofocus: true, input_html: {class: 'form-control'} %>
@@ -12,6 +12,7 @@
 
     <div class="form-group">
       <%= f.input :image, as: :file %>
+      <%= image_tag @post.image.url(:thumb) if @post.image.present? %>
     </div>
 
     <div class="form-group">
@@ -20,6 +21,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Criar post", class: 'btn btn-lg btn-block btn-primary' %>
+    <%= f.button :submit, "Editar post", class: 'btn btn-lg btn-block btn-primary' %>
   </div>
 <% end %>
