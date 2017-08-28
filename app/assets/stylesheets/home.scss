@@ -29,14 +29,21 @@ body {
 }
 
 .post-content {
-  h1 {
-    margin-top: 10px;
-    color: #F64F18;
+  .post-header {
+    display: block;
+    min-height: 78px;
+
+    h1 {
+      margin-top: 10px;
+      color: #F64F18;
+    }
   }
+
 
   .subtitle {
     font-size: 20px;
     font-weight: bolder;
+    min-height: 56px;
   }
 
   .image {
@@ -70,4 +77,24 @@ body {
     }
   }
 
+}
+
+.pagination {
+  display: block;
+  text-align: center;
+
+  a {
+    color: #fff;
+  }
+
+  .hm-btn {
+    background-color: #F64F18;
+    color: #fff;
+    margin: 0 5px;
+    padding: 10px 15px;
+  }
+
+  .page {
+    color: #333;
+  }
 }

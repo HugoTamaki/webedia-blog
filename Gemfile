@@ -19,6 +19,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 5.0.0"
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

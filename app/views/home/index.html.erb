@@ -1,12 +1,17 @@
 <% @posts.each do |post| %>
-  <div class="post <%= post == @posts.first ? "col-sm-12" : "col-sm-6" %>">
+  <div class="post <%= post == @posts.first ? "col-lg-12 col-sm-12 -col-xs-12" : "col-lg-6 col-sm-12 col-xs-12" %>">
     <div class="post-content <%= post == @posts.first ? "" : "others" %>">
-      <h1><%= post.title %></h1>
+      <div class="post-header">
+        <h1><%= post.title %></h1>
+      </div>
 
-      <p class="subtitle"><%= post.subtitle %></p>
+      <div class="subtitle">
+        <p><%= post.subtitle %></p>
+      </div>
+
 
       <div class="image">
-        <%= image_tag post.image.url(:normal), class: "post-image" %>
+        <%= image_tag post.image.url(:normal), class: 'post-image' %>
       </div>
 
       <div class="content <%= post == @posts.first ? "first" : "others" %>">
@@ -17,3 +22,5 @@
     </div>
   </div>
 <% end %>
+
+<%= paginate @posts %>

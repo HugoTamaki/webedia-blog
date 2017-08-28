@@ -3,7 +3,7 @@ module Admin
     before_action :authenticate_user!
 
     def index
-      @posts = Post.all
+      @posts = Post.order(:created_at).page params[:page]
     end
 
     def new
