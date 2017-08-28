@@ -30,7 +30,7 @@ module Admin
       if @post.update(post_params)
         redirect_to admin_posts_path, notice: "Post editado com sucesso!"
       else
-        render :edit, alert: "Verifique os campos e edite novamente."
+        render :edit, alert: "Verifique os campos e edite novamente.", status: :bad_request
       end
     end
 
