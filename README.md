@@ -1,24 +1,40 @@
-# README
+# Webedia blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+You must create a database.yml based on database.example.yml.
 
-* Ruby version
+This application uses Postgres, you must have it installed.
 
-* System dependencies
+Also you must have yarn installed.
 
-* Configuration
+After all set, run:
 
-* Database creation
+to install ruby and rails dependencies
+```
+bundle install
+```
 
-* Database initialization
+to install JS and CSS dependencies
+```
+yarn install
+```
 
-* How to run the test suite
+then, run the migrations with
+```
+rake db:create
+rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+After that, run `rails s` to put your rails server to run
 
-* Deployment instructions
+Run `rake db:seed` to create an Admin to test your website
 
-* ...
+Then access `http://localhost:3000/admin/login`
+
+and enter the login with:
+
+```
+email: teste@email.com
+password: teste123
+```
